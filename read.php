@@ -21,6 +21,7 @@
         <tr>
             <td>Sr No</td>
             <td>Name</td>
+            <td>Image</td>
             <td>Email</td>
             <td>Passsword</td>
             <td>Gender</td>
@@ -48,12 +49,17 @@
               $id = $row['id'];
               $name = $row['user_name'];
               $user_email = $row['user_email'];
+              $profile_photo = $row['profile_photo'];
               $user_password = $row['user_password'];
               $gender = $row['gender'];
             ?>
                 <tr>
                 <td><?php echo $i;?></td>
                 <td><?php echo $name;?></td>
+                <td>
+                <a href="images/<?php echo $profile_photo; ?>" download>
+                <img width="100px" height="100px" src="images/<?php echo $profile_photo; ?>" alt=""></td>
+                </a>
                 <td><?php echo $user_email;?></td>
                 <td><?php echo $user_password;?></td>
                 <td><?php echo $gender;?></td>
